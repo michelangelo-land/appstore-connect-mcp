@@ -1,0 +1,29 @@
+{
+  "name": "appstore-connect-mcp-remote",
+  "version": "0.1.0",
+  "description": "Remote stateless App Store Connect MCP on Cloudflare Workers (BYOK)",
+  "license": "MIT",
+  "homepage": "https://appstore.michelangelo.land/mcp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michelangelo-land/appstore-connect-mcp.git"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "type-check": "tsc --noEmit",
+    "mint-jwt": "bun run scripts/mint-apple-jwt.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server": "2.0.0",
+    "agents": "*",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260729.1",
+    "@types/node": "^26.6.2",
+    "typescript": "~6.0.3",
+    "wrangler": "^4.115.0"
+  }
+}
